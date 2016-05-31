@@ -16,12 +16,12 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/addtext.xml"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/layout/preview.xml",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/layout/preview.xml"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/layout/addtext.xml",
         "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/layout/addtext.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/layout/preview.xml",
+        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/layout/preview.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_common_top_bar.xml",
@@ -114,6 +114,10 @@
     {
         "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/layout/addwatermark.xml",
         "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/layout/addwatermark.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_main1.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_main1.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_enhance.xml",

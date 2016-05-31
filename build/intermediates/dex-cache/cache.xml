@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/exploded-aar/PhotoEditDemo/Photo_Library/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="8418e180d4372e7275e4af2bd93ae6cf105e41a6">
-        <dex dex="/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/pre-dexed/debug/PhotoEditDemo-Photo_Library-unspecified_cc6c5a842791d4088b126274c1b9d4865717d1a8.jar" />
-    </item>
-
-</items>
+<items version="2" />

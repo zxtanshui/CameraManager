@@ -1,60 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/common_bg" >
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_linear"
-        android:gravity="center" >
-
-        <ImageView
-            android:id="@+id/pictureShow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+    >
+        <TextView
+            android:id="@+id/tv_photo_take"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="拍照以及特效页面"
+            android:textSize="18sp"
+            android:background="#cccccc"
+        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+        ></View>
+        <TextView
+            android:id="@+id/tv_photo_select"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="从相片的翻书效果"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="#cccccc"
+        />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bottom_linear"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/addPictureFromPhoto"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="相册"
-            android:textColor="#979797"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/addPictureFromCamera"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="相机"
-            android:textColor="#979797"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/testBtn"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="测试"
-            android:textColor="#32cd99"
-            android:textSize="18dp" />
-    </LinearLayout>
-
 </RelativeLayout>
