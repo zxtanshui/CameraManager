@@ -1,0 +1,161 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:2:1-87:12
+	package
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:3:5-37
+	android:versionName
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml
+		INJECTED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml
+		INJECTED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:7:5-9:41
+MERGED from [CameraManagerH:Photo_Library:unspecified] /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/exploded-aar/CameraManagerH/Photo_Library/unspecified/AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:8:9-35
+application
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:11:5-72:19
+MERGED from [CameraManagerH:Photo_Library:unspecified] /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/exploded-aar/CameraManagerH/Photo_Library/unspecified/AndroidManifest.xml:11:5-20
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:15:9-45
+	android:label
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:16:9-56
+activity#com.jarlen.picturetest.MainActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:17:9-25:20
+	android:label
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:19:13-45
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:18:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:23:27-74
+activity#com.jarlen.picturetest.PhotoFrameActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:26:9-29:75
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:28:13-49
+	android:theme
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:29:13-72
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:27:13-69
+activity#com.jarlen.picturetest.DrawBaseActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:30:9-32:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:32:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:31:13-67
+activity#com.jarlen.picturetest.MosaicActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:33:9-35:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:35:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:34:13-65
+activity#com.jarlen.picturetest.ImageFilterActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:36:9-38:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:37:13-70
+activity#com.jarlen.picturetest.ImageCropActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:39:9-41:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:41:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:40:13-68
+activity#com.jarlen.picturetest.WarpActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:42:9-44:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:44:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:43:13-63
+activity#com.jarlen.picturetest.EnhanceActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:45:9-47:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:47:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:46:13-66
+activity#com.jarlen.picturetest.AddWatermarkActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:48:9-50:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:50:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:49:13-71
+activity#com.jarlen.picturetest.AddTextActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:51:9-53:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:53:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:52:13-66
+activity#com.jarlen.picturetest.PreviewActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:54:9-56:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:56:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:55:13-66
+activity#com.jarlen.picturetest.RevolveActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:57:9-59:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:59:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:58:13-66
+activity#com.jarlen.temptest.ImgeditActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:63:9-65:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:65:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:64:13-63
+activity#com.jarlen.temptest.PhotoRotate
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:66:9-68:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:68:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:67:13-59
+activity#com.jarlen.temptest.FrameFilterActivity
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:69:9-71:52
+	android:screenOrientation
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:71:13-49
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:70:13-67
+uses-feature#android.hardware.camera
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:74:5-60
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:74:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:75:5-70
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:75:19-67
+uses-permission#android.permission.CAMERA
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:77:5-65
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:77:22-62
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:78:5-72
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:78:22-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:81:5-82:23
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:81:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:84:5-85:23
+	android:name
+		ADDED from /Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/AndroidManifest.xml:84:22-81
