@@ -4,15 +4,7 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Library/build/intermediates/bundles/debug/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Library/build/intermediates/res/merged/androidTest/debug/layout/crop_image_view.xml",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Library/build/intermediates/bundles/debug/res/layout/crop_image_view.xml"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Library/build/intermediates/res/merged/androidTest/debug/layout/crop_image_view.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Library/build/intermediates/bundles/debug/res/layout/crop_image_view.xml"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Library/build/intermediates/res/merged/androidTest/debug/layout/activity_main.xml",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Library/build/intermediates/bundles/debug/res/layout/activity_main.xml"
     }
 ]

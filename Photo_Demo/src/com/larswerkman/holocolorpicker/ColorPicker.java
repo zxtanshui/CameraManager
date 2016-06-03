@@ -16,7 +16,7 @@
 
 package com.larswerkman.holocolorpicker;
 
-import com.jarlen.picturetest.R;
+import com.hebin.picturetest.R;
 
 import android.content.Context;
 import android.content.res.Resources;

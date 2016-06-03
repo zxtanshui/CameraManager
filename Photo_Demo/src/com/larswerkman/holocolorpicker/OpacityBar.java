@@ -31,7 +31,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.jarlen.picturetest.R;
+import com.hebin.picturetest.R;
 
 public class OpacityBar extends View {
 

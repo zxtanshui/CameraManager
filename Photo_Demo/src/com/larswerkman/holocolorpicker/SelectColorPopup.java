@@ -2,7 +2,6 @@ package com.larswerkman.holocolorpicker;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -12,16 +11,10 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.PopupWindow;
-import android.widget.Toast;
 
-import com.jarlen.picturetest.R;
-import com.larswerkman.holocolorpicker.ColorPicker;
+import com.hebin.picturetest.R;
 import com.larswerkman.holocolorpicker.ColorPicker.OnColorChangedListener;
 import com.larswerkman.holocolorpicker.ColorPicker.OnColorSelectedListener;
-import com.larswerkman.holocolorpicker.OpacityBar;
-import com.larswerkman.holocolorpicker.SVBar;
-import com.larswerkman.holocolorpicker.SaturationBar;
-import com.larswerkman.holocolorpicker.ValueBar;
 
 public class SelectColorPopup extends PopupWindow implements OnColorChangedListener, OnColorSelectedListener{
 

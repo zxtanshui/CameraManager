@@ -23,12 +23,12 @@ public final class R {
 	public static final class drawable {
 		public static final int delete = 0x7f02000a;
 		public static final int ic_launcher = 0x7f020029;
-		public static final int rotate = 0x7f020032;
+		public static final int rotate = 0x7f020038;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0a0025;
-		public static final int ImageView_image = 0x7f0a0024;
-		public static final int action_settings = 0x7f0a0064;
+		public static final int CropOverlayView = 0x7f0a0026;
+		public static final int ImageView_image = 0x7f0a0025;
+		public static final int action_settings = 0x7f0a006a;
 		public static final int addPictureFromCamera = 0x7f0a0009;
 		public static final int addPictureFromPhoto = 0x7f0a0008;
 		public static final int off = 0x7f0a0000;
@@ -39,10 +39,10 @@ public final class R {
 	}
 	public static final class layout {
 		public static final int activity_main = 0x7f030000;
-		public static final int crop_image_view = 0x7f030005;
+		public static final int crop_image_view = 0x7f030006;
 	}
 	public static final class menu {
-		public static final int main = 0x7f090000;
+		public static final int main = 0x7f090001;
 	}
 	public static final class string {
 		public static final int action_settings = 0x7f080000;

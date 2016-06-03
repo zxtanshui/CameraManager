@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jarlen.picturetest"
+    package="com.hebin.picturetest"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -15,7 +15,7 @@
         android:screenOrientation="portrait"
         android:theme="@android:style/Theme.Holo.Light" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.hebin.picturetest.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,57 +23,61 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity1"
+        <activity android:name="com.hebin.picturetest.MainActivity1"
                   android:screenOrientation="portrait"
                >
 
         </activity>
         <activity
-            android:name="com.jarlen.picturetest.PhotoFrameActivity"
+            android:name="com.hebin.picturetest.PhotoFrameActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.jarlen.picturetest.DrawBaseActivity"
+            android:name="com.hebin.picturetest.DrawBaseActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.MosaicActivity"
+            android:name="com.hebin.picturetest.MosaicActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.ImageFilterActivity"
+            android:name="com.hebin.picturetest.ImageFilterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.ImageCropActivity"
+            android:name="com.hebin.picturetest.ImageCropActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.WarpActivity"
+            android:name="com.hebin.picturetest.WarpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.EnhanceActivity"
+            android:name="com.hebin.picturetest.EnhanceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.AddWatermarkActivity"
+            android:name="com.hebin.picturetest.AddWatermarkActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.AddTextActivity"
+            android:name="com.hebin.picturetest.AddTextActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.PreviewActivity"
+            android:name="com.hebin.picturetest.PreviewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.picturetest.RevolveActivity"
+            android:name="com.hebin.picturetest.RevolveActivity"
             android:screenOrientation="portrait" />
 
         <!-- 测试 -->
 
         <activity
-            android:name="com.jarlen.temptest.ImgeditActivity"
+            android:name="com.hebin.temptest.ImgeditActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.temptest.PhotoRotate"
+            android:name="com.hebin.temptest.PhotoRotate"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jarlen.temptest.FrameFilterActivity"
+            android:name="com.hebin.temptest.FrameFilterActivity"
             android:screenOrientation="portrait" />
+
+        <activity android:name="com.hebin.pagebrowse.PageBrowseActivity"
+                  android:screenOrientation="portrait"
+        ></activity>
     </application>
 
     <uses-feature android:name="android.hardware.camera" />

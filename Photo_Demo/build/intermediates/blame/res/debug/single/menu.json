@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/menu/main.xml"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/menu/activity_pagebrowse.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/menu/activity_pagebrowse.xml"
     }
 ]

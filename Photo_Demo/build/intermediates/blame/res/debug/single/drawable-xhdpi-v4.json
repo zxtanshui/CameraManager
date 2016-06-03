@@ -1,23 +1,7 @@
 [
     {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/youhua.jpg",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/youhua.jpg"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_view_ok.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-xhdpi/btn_view_ok.png"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/hi4.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/hi4.png"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/river.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/river.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/hi3.jpg",
@@ -36,24 +20,8 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-xhdpi/hi0.jpg"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/flower.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/flower.png"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_view_back.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/btn_view_back.png"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_launcher.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/hi3.jpg",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/hi3.jpg"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_bg_highlight_white.9.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/btn_bg_highlight_white.9.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/hi4.png",
@@ -62,18 +30,6 @@
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/youhua.jpg",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-xhdpi/youhua.jpg"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/hi0.jpg",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/hi0.jpg"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/icon_auto.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/icon_auto.png"
-    },
-    {
-        "merged": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_view_ok.png",
-        "source": "/Users/zhangxin/work/studioProgram/PhotoEditDemo/Photo_Demo/res/drawable-xhdpi/btn_view_ok.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_bg_highlight_white.9.png",
