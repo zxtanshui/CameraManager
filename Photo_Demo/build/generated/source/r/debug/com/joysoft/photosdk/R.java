@@ -23,23 +23,23 @@ public final class R {
 	public static final class drawable {
 		public static final int delete = 0x7f02000a;
 		public static final int ic_launcher = 0x7f020029;
-		public static final int rotate = 0x7f020038;
+		public static final int rotate = 0x7f020040;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0a0026;
-		public static final int ImageView_image = 0x7f0a0025;
-		public static final int action_settings = 0x7f0a006a;
-		public static final int addPictureFromCamera = 0x7f0a0009;
-		public static final int addPictureFromPhoto = 0x7f0a0008;
+		public static final int CropOverlayView = 0x7f0a002a;
+		public static final int ImageView_image = 0x7f0a0029;
+		public static final int action_settings = 0x7f0a006e;
+		public static final int addPictureFromCamera = 0x7f0a000b;
+		public static final int addPictureFromPhoto = 0x7f0a000a;
 		public static final int off = 0x7f0a0000;
 		public static final int on = 0x7f0a0001;
 		public static final int onTouch = 0x7f0a0002;
-		public static final int pictureShow = 0x7f0a0007;
-		public static final int testBtn = 0x7f0a000a;
+		public static final int pictureShow = 0x7f0a0009;
+		public static final int testBtn = 0x7f0a000c;
 	}
 	public static final class layout {
 		public static final int activity_main = 0x7f030000;
-		public static final int crop_image_view = 0x7f030006;
+		public static final int crop_image_view = 0x7f030008;
 	}
 	public static final class menu {
 		public static final int main = 0x7f090001;

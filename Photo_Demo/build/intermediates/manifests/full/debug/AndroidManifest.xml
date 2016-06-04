@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="19" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -89,6 +89,14 @@
         <activity
             android:name="com.hebin.pagebrowse.PageBrowseActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hebin.scale.ScaleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hebin.scale.GestureZoom"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

@@ -28,16 +28,20 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/layout_filter.xml"
     },
     {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_zoom.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_zoom.xml"
+    },
+    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_common_top_bar.xml",
-        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/layout_common_top_bar.xml"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/item_layout.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/item_layout.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_common_top_bar.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/layout_common_top_bar.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/select_color.xml",
@@ -58,6 +62,10 @@
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_enhance.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/layout_enhance.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_scale.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_scale.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_mosaic.xml",
