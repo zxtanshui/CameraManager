@@ -1,22 +1,33 @@
 package com.hebin.scale;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.Menu;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.hebin.picturetest.R;
+import com.hebin.selectpic.imageloader.SelectPicActivity;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.download.ImageDownloader;
+
+import java.util.ArrayList;
 
 
 /**
  * 通过手势 缩放图片 左--->右 放大 右 --->左 缩小 速度越快，缩放比例越大
  */
-public class GestureZoom extends Activity implements GestureDetector.OnGestureListener {
+public class GestureZoom extends Activity implements GestureDetector.OnGestureListener, View.OnClickListener {
     // 定义手势检测器实例
     GestureDetector detector;
     ImageView imageView;
@@ -28,11 +39,16 @@ public class GestureZoom extends Activity implements GestureDetector.OnGestureLi
     float currentScale = 1;
     // 控制图片缩放的Matrix对象
     Matrix matrix;
-
+    private TextView tv_photo_select;
+    private Context mContext;
+    private static final int FLAG_SELECT_PIC_ALONG = 1003;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zoom);
+        mContext=GestureZoom.this;
+
+        tv_photo_select=(TextView) findViewById(R.id.tv_photo_select);
         // 创建手势检测器
         detector = new GestureDetector(this);
         imageView = (ImageView) findViewById(R.id.show);
@@ -47,6 +63,8 @@ public class GestureZoom extends Activity implements GestureDetector.OnGestureLi
         // 设置 ImageView初始化显示的图片
         imageView.setImageBitmap(BitmapFactory.decodeResource(
                 this.getResources(), R.drawable.photo1));
+
+        tv_photo_select.setOnClickListener(GestureZoom.this);
     }
 
     @Override
@@ -104,6 +122,54 @@ public class GestureZoom extends Activity implements GestureDetector.OnGestureLi
                 matrix, true);
         //显示新的位图
         imageView.setImageBitmap(bitmap2);
+        return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+         switch (v.getId()){
+             case R.id.tv_photo_select:
+                 Intent intent1 = new Intent(mContext, SelectPicActivity.class);
+                 startActivityForResult(intent1, FLAG_SELECT_PIC_ALONG);
+                 break;
+         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data==null){
+            return;
+        }
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == FLAG_SELECT_PIC_ALONG) {
+                String imagePath="";
+                final ArrayList<String> result = data
+                        .getStringArrayListExtra("result");
+                    if(result.size()>0){
+                        imagePath=result.get(0);
+                    }
+
+                //显示图片的配置
+                DisplayImageOptions options = new DisplayImageOptions.Builder()
+                        // .showImageOnLoading(R.drawable.ic_stub)
+                        // .showImageOnFail(R.drawable.ic_error)
+                        .cacheInMemory(true)
+                        .cacheOnDisk(true)
+                        .bitmapConfig(Bitmap.Config.RGB_565)
+                        .build();
+
+                String imageUrl1 = ImageDownloader.Scheme.FILE.wrap(imagePath);
+                ImageLoader.getInstance().displayImage(imageUrl1, imageView, options);
+            }
+        }
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_pagebrowse, menu);
         return true;
     }
 }
