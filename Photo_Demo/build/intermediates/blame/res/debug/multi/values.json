@@ -756,9 +756,30 @@
                     "startLine": 63,
                     "startColumn": 4,
                     "startOffset": 3935,
-                    "endLine": 68,
+                    "endLine": 66,
                     "endColumn": 12,
-                    "endOffset": 4228
+                    "endOffset": 4121
+                },
+                "from": {
+                    "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 3938,
+                        "endLine": 96,
+                        "endColumn": 12,
+                        "endOffset": 4124
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 4126,
+                    "endLine": 72,
+                    "endColumn": 12,
+                    "endOffset": 4419
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -774,12 +795,12 @@
             },
             {
                 "to": {
-                    "startLine": 69,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 4233,
-                    "endLine": 74,
+                    "startOffset": 4424,
+                    "endLine": 78,
                     "endColumn": 12,
-                    "endOffset": 4527
+                    "endOffset": 4718
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -795,12 +816,12 @@
             },
             {
                 "to": {
-                    "startLine": 75,
+                    "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 4532,
-                    "endLine": 80,
+                    "startOffset": 4723,
+                    "endLine": 84,
                     "endColumn": 12,
-                    "endOffset": 4795
+                    "endOffset": 4986
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -816,12 +837,12 @@
             },
             {
                 "to": {
-                    "startLine": 81,
+                    "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 4800,
-                    "endLine": 84,
+                    "startOffset": 4991,
+                    "endLine": 88,
                     "endColumn": 12,
-                    "endOffset": 4997
+                    "endOffset": 5188
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -837,12 +858,12 @@
             },
             {
                 "to": {
-                    "startLine": 85,
+                    "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 5002,
-                    "endLine": 88,
+                    "startOffset": 5193,
+                    "endLine": 92,
                     "endColumn": 12,
-                    "endOffset": 5187
+                    "endOffset": 5378
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -858,12 +879,12 @@
             },
             {
                 "to": {
-                    "startLine": 89,
+                    "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 5192,
-                    "endLine": 92,
+                    "startOffset": 5383,
+                    "endLine": 96,
                     "endColumn": 12,
-                    "endOffset": 5381
+                    "endOffset": 5572
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -879,12 +900,12 @@
             },
             {
                 "to": {
-                    "startLine": 93,
+                    "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 5386,
-                    "endLine": 101,
+                    "startOffset": 5577,
+                    "endLine": 105,
                     "endColumn": 12,
-                    "endOffset": 5826
+                    "endOffset": 6017
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -900,12 +921,12 @@
             },
             {
                 "to": {
-                    "startLine": 102,
+                    "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 5831,
-                    "endLine": 106,
+                    "startOffset": 6022,
+                    "endLine": 110,
                     "endColumn": 12,
-                    "endOffset": 6053
+                    "endOffset": 6244
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",
@@ -921,12 +942,12 @@
             },
             {
                 "to": {
-                    "startLine": 107,
+                    "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 6058,
-                    "endLine": 118,
+                    "startOffset": 6249,
+                    "endLine": 122,
                     "endColumn": 12,
-                    "endOffset": 6687
+                    "endOffset": 6878
                 },
                 "from": {
                     "file": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/values/styles.xml",

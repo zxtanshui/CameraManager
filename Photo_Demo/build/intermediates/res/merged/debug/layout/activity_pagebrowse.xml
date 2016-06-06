@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.hebin.pagebrowse.PageWidget
+        android:id="@+id/main_pageWidget"
+        android:layout_width="700dp"
+        android:layout_height="420dp"
+        android:layout_centerInParent="true"
+        >
+        
+    </com.hebin.pagebrowse.PageWidget>
+
+</RelativeLayout>

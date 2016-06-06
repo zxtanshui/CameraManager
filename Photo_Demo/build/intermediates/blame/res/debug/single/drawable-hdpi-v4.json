@@ -52,12 +52,20 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/marker01.png"
     },
     {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/pictures_selected.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/pictures_selected.png"
+    },
+    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/delete.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/exploded-aar/CameraManagerH/Photo_Library/unspecified/res/drawable-hdpi-v4/delete.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/photo1.jpg",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/photo1.jpg"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_title_back.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/icon_title_back.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/frame_around1_left_bottom.png",
@@ -72,6 +80,10 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/photo4.jpg"
     },
     {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/pic_dir.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/pic_dir.png"
+    },
+    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/stamp2star.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/stamp2star.png"
     },
@@ -80,12 +92,12 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/frame_around1_left_top.png"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/zui.png",
-        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/zui.png"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/photo9.jpg",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/photo9.jpg"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/zui.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/zui.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/frame_around2_left.png",
@@ -120,8 +132,20 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/stamp1star.png"
     },
     {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_left_menu.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/icon_left_menu.png"
+    },
+    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/photo2.jpg",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/photo2.jpg"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/dir_choose.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/dir_choose.png"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/pictures_no.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/pictures_no.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/frame_around1_right_top.png",
@@ -138,6 +162,10 @@
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/frame_around1_left.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/frame_around1_left.png"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/picture_unselected.png",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable-hdpi/picture_unselected.png"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable-hdpi-v4/photo10.jpg",

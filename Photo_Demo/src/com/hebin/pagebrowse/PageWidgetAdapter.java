@@ -17,7 +17,12 @@ public class PageWidgetAdapter extends BaseAdapter {
 	private LayoutInflater inflater;
 	private Integer[] imgs = {
             R.drawable.photo1, R.drawable.photo2, R.drawable.photo3,
-			  R.drawable.photo4, R.drawable.photo5, R.drawable.photo6};
+			  R.drawable.photo4, R.drawable.photo5,
+            R.drawable.photo6,R.drawable.photo7,
+            R.drawable.photo7,R.drawable.photo8,
+            R.drawable.photo9,R.drawable.photo10,
+            R.drawable.photo11,R.drawable.photo12,
+            R.drawable.photo13,R.drawable.photo14};
 	
 	public PageWidgetAdapter(Context context) {
 		mContext = context;

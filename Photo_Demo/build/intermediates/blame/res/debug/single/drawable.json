@@ -84,20 +84,20 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/sucai25.jpg"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/riguang.jpg",
-        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/riguang.jpg"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/zuo.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/zuo.png"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/bg_touch_highlight_white.xml",
-        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/bg_touch_highlight_white.xml"
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/riguang.jpg",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/riguang.jpg"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/gouda.png",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/gouda.png"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/bg_touch_highlight_white.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/drawable/bg_touch_highlight_white.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/drawable/sucai18.jpg",

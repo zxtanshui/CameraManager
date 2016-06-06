@@ -61,6 +61,10 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">10dp</item>
     </style>
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
     <style name="bottom_menu">
         <item name="android:background">@color/bottom_menu_bg</item>
         <item name="android:layout_width">fill_parent</item>

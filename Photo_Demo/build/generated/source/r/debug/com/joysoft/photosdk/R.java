@@ -15,43 +15,43 @@ public final class R {
 		public static final int imageResource = 0x7f01000f;
 	}
 	public static final class dimen {
-		public static final int activity_horizontal_margin = 0x7f050000;
-		public static final int activity_vertical_margin = 0x7f050001;
-		public static final int max_dist = 0x7f05000c;
-		public static final int warp_line = 0x7f05000d;
+		public static final int activity_horizontal_margin = 0x7f060000;
+		public static final int activity_vertical_margin = 0x7f060001;
+		public static final int max_dist = 0x7f06000c;
+		public static final int warp_line = 0x7f06000d;
 	}
 	public static final class drawable {
 		public static final int delete = 0x7f02000a;
-		public static final int ic_launcher = 0x7f020029;
-		public static final int rotate = 0x7f020040;
+		public static final int ic_launcher = 0x7f02002a;
+		public static final int rotate = 0x7f020047;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0a002a;
-		public static final int ImageView_image = 0x7f0a0029;
-		public static final int action_settings = 0x7f0a006e;
-		public static final int addPictureFromCamera = 0x7f0a000b;
-		public static final int addPictureFromPhoto = 0x7f0a000a;
-		public static final int off = 0x7f0a0000;
-		public static final int on = 0x7f0a0001;
-		public static final int onTouch = 0x7f0a0002;
-		public static final int pictureShow = 0x7f0a0009;
-		public static final int testBtn = 0x7f0a000c;
+		public static final int CropOverlayView = 0x7f0b002e;
+		public static final int ImageView_image = 0x7f0b002d;
+		public static final int action_settings = 0x7f0b007c;
+		public static final int addPictureFromCamera = 0x7f0b000b;
+		public static final int addPictureFromPhoto = 0x7f0b000a;
+		public static final int off = 0x7f0b0000;
+		public static final int on = 0x7f0b0001;
+		public static final int onTouch = 0x7f0b0002;
+		public static final int pictureShow = 0x7f0b0009;
+		public static final int testBtn = 0x7f0b000c;
 	}
 	public static final class layout {
 		public static final int activity_main = 0x7f030000;
-		public static final int crop_image_view = 0x7f030008;
+		public static final int crop_image_view = 0x7f030009;
 	}
 	public static final class menu {
-		public static final int main = 0x7f090001;
+		public static final int main = 0x7f0a0001;
 	}
 	public static final class string {
-		public static final int action_settings = 0x7f080000;
-		public static final int app_name = 0x7f080001;
-		public static final int hello_world = 0x7f080009;
+		public static final int action_settings = 0x7f090000;
+		public static final int app_name = 0x7f090001;
+		public static final int hello_world = 0x7f090009;
 	}
 	public static final class style {
-		public static final int AppBaseTheme = 0x7f040000;
-		public static final int AppTheme = 0x7f040001;
+		public static final int AppBaseTheme = 0x7f050000;
+		public static final int AppTheme = 0x7f050001;
 	}
 	public static final class styleable {
 		public static final int[] CropImageView = { 0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f };

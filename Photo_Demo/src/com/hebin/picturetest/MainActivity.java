@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.hebin.pagebrowse.PageBrowseActivity;
+import com.hebin.scale.GestureZoom;
+import com.hebin.scale.ScaleActivity;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by zhangxin on 16/5/31.
@@ -15,6 +19,8 @@ import com.hebin.pagebrowse.PageBrowseActivity;
 public class MainActivity extends Activity implements View.OnClickListener{
     private TextView tv_photo_take;
     private TextView tv_photo_select;
+    private TextView tv_photo_cale;
+    private TextView tv_photo_gesture;
     private Context mContext;
 
     @Override
@@ -27,9 +33,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         mContext=MainActivity.this;
         tv_photo_take=(TextView) findViewById(R.id.tv_photo_take);
         tv_photo_select=(TextView) findViewById(R.id.tv_photo_select);
+        tv_photo_cale=(TextView)findViewById(R.id.tv_photo_cale);
+        tv_photo_gesture=(TextView)findViewById(R.id.tv_photo_gesture);
 
         tv_photo_take.setOnClickListener(this);
         tv_photo_select.setOnClickListener(this);
+        tv_photo_cale.setOnClickListener(this);
+        tv_photo_gesture.setOnClickListener(this);
 
     }
 
@@ -43,6 +53,14 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.tv_photo_select:
                 Intent intent1=new Intent(mContext, PageBrowseActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.tv_photo_cale:
+                Intent intent2=new Intent(mContext, ScaleActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.tv_photo_gesture:
+                Intent intent3=new Intent(mContext, GestureZoom.class);
+                startActivity(intent3);
                 break;
         }
     }
