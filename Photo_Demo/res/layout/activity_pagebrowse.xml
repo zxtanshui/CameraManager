@@ -2,7 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+    <TextView
+        android:id="@+id/tv_photo_select"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#999900"
+        android:text="图片选择"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textStyle="bold"
+    />
     <com.hebin.pagebrowse.PageWidget
         android:id="@+id/main_pageWidget"
         android:layout_width="700dp"
