@@ -10,11 +10,13 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hebin.picturetest.ImageFilterActivity;
 import com.hebin.picturetest.R;
 import com.hebin.selectpic.imageloader.SelectPicActivity;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -42,6 +44,7 @@ public class GestureZoom extends Activity implements GestureDetector.OnGestureLi
     private TextView tv_photo_select;
     private Context mContext;
     private static final int FLAG_SELECT_PIC_ALONG = 1003;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -172,4 +175,5 @@ public class GestureZoom extends Activity implements GestureDetector.OnGestureLi
         getMenuInflater().inflate(R.menu.activity_pagebrowse, menu);
         return true;
     }
+
 }

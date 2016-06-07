@@ -4,6 +4,18 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
 >
+    <TextView
+        android:id="@+id/tv_photo_select"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#999900"
+        android:text="图片选择"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textStyle="bold"
+
+    />
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"

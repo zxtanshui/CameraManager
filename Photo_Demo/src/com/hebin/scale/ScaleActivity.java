@@ -1,6 +1,9 @@
 package com.hebin.scale;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -8,22 +11,43 @@ import android.util.FloatMath;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.hebin.picturetest.R;
+import com.hebin.selectpic.imageloader.SelectPicActivity;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.download.ImageDownloader;
+
+import java.util.ArrayList;
 
 /**
  * Created by zhangxin on 16/6/4.
  */
-public class ScaleActivity extends Activity {
+public class ScaleActivity extends Activity implements View.OnClickListener {
     private ImageView imageView;
-
+    private TextView tv_photo_select;
+    private Context mContext;
+    private static final int FLAG_SELECT_PIC_ALONG = 1003;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scale);
-
+        mContext=ScaleActivity.this;
+        tv_photo_select=(TextView) findViewById(R.id.tv_photo_select);
         imageView = (ImageView) this.findViewById(R.id.imageView);
         imageView.setOnTouchListener(new TouchListener());
+        tv_photo_select.setOnClickListener(ScaleActivity.this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tv_photo_select:
+                Intent intent1 = new Intent(mContext, SelectPicActivity.class);
+                startActivityForResult(intent1, FLAG_SELECT_PIC_ALONG);
+                break;
+        }
     }
 
     private final class TouchListener implements View.OnTouchListener {
@@ -114,6 +138,38 @@ public class ScaleActivity extends Activity {
             float midX = (event.getX(1) + event.getX(0)) / 2;
             float midY = (event.getY(1) + event.getY(0)) / 2;
             return new PointF(midX, midY);
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data==null){
+            return;
+        }
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == FLAG_SELECT_PIC_ALONG) {
+                String imagePath="";
+                final ArrayList<String> result = data
+                        .getStringArrayListExtra("result");
+                if(result.size()>0){
+                    imagePath=result.get(0);
+                }
+
+                //显示图片的配置
+                DisplayImageOptions options = new DisplayImageOptions.Builder()
+                        // .showImageOnLoading(R.drawable.ic_stub)
+                        // .showImageOnFail(R.drawable.ic_error)
+                        .cacheInMemory(true)
+                        .cacheOnDisk(true)
+                        .bitmapConfig(Bitmap.Config.RGB_565)
+                        .build();
+
+                String imageUrl1 = ImageDownloader.Scheme.FILE.wrap(imagePath);
+                ImageLoader.getInstance().displayImage(imageUrl1, imageView, options);
+            }
         }
 
     }

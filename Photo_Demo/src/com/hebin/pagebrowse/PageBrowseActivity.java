@@ -37,7 +37,7 @@ public class PageBrowseActivity extends Activity implements View.OnClickListener
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_pagebrowse, menu);
+        //getMenuInflater().inflate(R.menu.activity_pagebrowse, menu);
         return true;
     }
 
