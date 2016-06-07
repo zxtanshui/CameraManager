@@ -7,11 +7,13 @@ import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.FloatMath;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hebin.picturetest.R;
 import com.hebin.selectpic.imageloader.SelectPicActivity;
@@ -19,6 +21,13 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.download.ImageDownloader;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
@@ -29,15 +38,27 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
     private TextView tv_photo_select;
     private Context mContext;
     private static final int FLAG_SELECT_PIC_ALONG = 1003;
+    private TextView tv_photo_attribute;
+    private TextView tv_photo_create_time;
+    private TextView tv_photo_create_location;
+
+    String imagePath="";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scale);
         mContext=ScaleActivity.this;
         tv_photo_select=(TextView) findViewById(R.id.tv_photo_select);
+        tv_photo_attribute=(TextView)findViewById(R.id.tv_photo_attribute);
+        tv_photo_create_time=(TextView)findViewById(R.id.tv_photo_create_time);
+        tv_photo_create_location=(TextView)findViewById(R.id.tv_photo_create_location);
+
         imageView = (ImageView) this.findViewById(R.id.imageView);
         imageView.setOnTouchListener(new TouchListener());
         tv_photo_select.setOnClickListener(ScaleActivity.this);
+        tv_photo_attribute.setOnClickListener(this);
+        tv_photo_create_time.setOnClickListener(this);
+        tv_photo_create_location.setOnClickListener(this);
     }
 
     @Override
@@ -47,10 +68,72 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                 Intent intent1 = new Intent(mContext, SelectPicActivity.class);
                 startActivityForResult(intent1, FLAG_SELECT_PIC_ALONG);
                 break;
+            case R.id.tv_photo_attribute:
+                if(!TextUtils.isEmpty(imagePath)){
+                    File file = new File(imagePath);
+                    FileInputStream fis =null;
+                    try {
+                        fis=new FileInputStream(file);
+                        fis.getChannel();
+                        Toast.makeText(mContext,FormetFileSize(fis.available())+"",Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    Toast.makeText(mContext,"请选择照片",Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+            case R.id.tv_photo_create_time://获取拍照时间
+                if(!TextUtils.isEmpty(imagePath)){
+                    File file = new File(imagePath);
+                    FileInputStream fis =null;
+                    try {
+                        fis=new FileInputStream(file);
+
+                        Toast.makeText(mContext,getFileCreated(file)+"",Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    Toast.makeText(mContext,"请选择照片",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.tv_photo_create_location://获取图片路径
+                if(!TextUtils.isEmpty(imagePath)){
+                    File file = new File(imagePath);
+                    FileInputStream fis =null;
+                    try {
+                        fis=new FileInputStream(file);
+
+                        Toast.makeText(mContext,file.getAbsolutePath()+"",Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    Toast.makeText(mContext,"请选择照片",Toast.LENGTH_SHORT).show();
+                }
+                break;
         }
     }
 
-    private final class TouchListener implements View.OnTouchListener {
+    public String FormetFileSize(long fileS) {//转换文件大小
+        DecimalFormat df = new DecimalFormat("#.00");
+        String fileSizeString = "";
+        if (fileS < 1024) {
+            fileSizeString = df.format((double) fileS) + "B";
+        } else if (fileS < 1048576) {
+            fileSizeString = df.format((double) fileS / 1024) + "K";
+        } else if (fileS < 1073741824) {
+            fileSizeString = df.format((double) fileS / 1048576) + "M";
+        } else {
+            fileSizeString = df.format((double) fileS / 1073741824) +"G";
+        }
+        return fileSizeString;
+    }
+
+
+        private final class TouchListener implements View.OnTouchListener {
 
         /** 记录是拖拉照片模式还是放大缩小照片模式 */
         private int mode = 0;// 初始状态
@@ -151,7 +234,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
 
         if (resultCode == RESULT_OK) {
             if (requestCode == FLAG_SELECT_PIC_ALONG) {
-                String imagePath="";
+
                 final ArrayList<String> result = data
                         .getStringArrayListExtra("result");
                 if(result.size()>0){
@@ -172,5 +255,107 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
             }
         }
 
+    }
+
+
+
+
+    public  String getFileCreated(final File file) {
+        if(null == file)
+        {
+            return null;
+        }
+
+        String rs = null;
+        final StringBuilder sb = new StringBuilder();
+        Process p = null;
+
+        try
+        {
+            p = Runtime.getRuntime().exec(String.format("cmd /C dir %s /tc", file.getAbsolutePath()));
+        }
+        catch(IOException e)
+        {
+            return rs;
+        }
+
+        final InputStream is = p.getInputStream();
+        final InputStreamReader ir = new InputStreamReader(is);
+        final BufferedReader br = new BufferedReader(ir);
+
+        Runnable runnable = new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                String data = null;
+
+                try
+                {
+                    while(null != (data = br.readLine()))
+                    {
+                        if(-1 != data.toLowerCase().indexOf(file.getName().toLowerCase()))
+                        {
+                            String[] temp = data.split(" +");
+
+                            if(2 <= temp.length)
+                            {
+                                String time = String.format("%s %s", temp[0], temp[1]);
+                                sb.append(time);
+                            }
+
+                            break;
+                        }
+                    }
+                }
+                catch(IOException e)
+                {
+                    e.printStackTrace();
+                }
+                finally
+                {
+                    try
+                    {
+                        if(null != br)
+                        {
+                            br.close();
+                        }
+
+                        if(null != ir)
+                        {
+                            ir.close();
+                        }
+
+                        if(null != is)
+                        {
+                            is.close();
+                        }
+                    }
+                    catch(IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+        Thread thread = new Thread(runnable);
+        thread.start();
+
+        try
+        {
+            thread.join();
+        }
+        catch(InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+
+        if(0 != sb.length())
+        {
+            rs = sb.toString();
+        }
+
+        return rs;
     }
 }

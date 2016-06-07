@@ -92,6 +92,10 @@
                   android:screenOrientation="portrait"
         >
         </activity>
+        <activity android:name="com.hebin.attribute.AttributeActivity"
+                  android:screenOrientation="portrait"
+        >
+        </activity>
     </application>
 
     <uses-feature android:name="android.hardware.camera" />

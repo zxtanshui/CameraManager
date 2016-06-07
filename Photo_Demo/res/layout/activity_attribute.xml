@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:orientation="vertical"
+>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+    >
+
+        <TextView
+            android:id="@+id/tv_photo_select"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="50dp"
+            android:background="#999900"
+            android:text="图片选择"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+
+        />
+        <TextView
+
+            android:id="@+id/tv_photo_attribute"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#999900"
+            android:text="显示图片属性"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+           android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:gravity="center"
+        />
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_photo_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+</LinearLayout>

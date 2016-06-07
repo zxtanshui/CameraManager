@@ -105,6 +105,10 @@
             android:name="com.hebin.selectpic.imageloader.SelectPicActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.hebin.attribute.AttributeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

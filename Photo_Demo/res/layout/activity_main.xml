@@ -58,5 +58,20 @@
             android:background="#cccccc"
             android:visibility="gone"
         />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+        ></View>
+        <TextView
+            android:id="@+id/tv_photo_attribute"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="相片的属性"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="#cccccc"
+            android:visibility="gone"
+        />
     </LinearLayout>
 </RelativeLayout>

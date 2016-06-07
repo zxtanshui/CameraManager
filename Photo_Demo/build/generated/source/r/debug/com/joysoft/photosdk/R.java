@@ -26,20 +26,20 @@ public final class R {
 		public static final int rotate = 0x7f020047;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0b002e;
-		public static final int ImageView_image = 0x7f0b002d;
-		public static final int action_settings = 0x7f0b007c;
-		public static final int addPictureFromCamera = 0x7f0b000b;
-		public static final int addPictureFromPhoto = 0x7f0b000a;
+		public static final int CropOverlayView = 0x7f0b0032;
+		public static final int ImageView_image = 0x7f0b0031;
+		public static final int action_settings = 0x7f0b0080;
+		public static final int addPictureFromCamera = 0x7f0b000d;
+		public static final int addPictureFromPhoto = 0x7f0b000c;
 		public static final int off = 0x7f0b0000;
 		public static final int on = 0x7f0b0001;
 		public static final int onTouch = 0x7f0b0002;
-		public static final int pictureShow = 0x7f0b0009;
-		public static final int testBtn = 0x7f0b000c;
+		public static final int pictureShow = 0x7f0b000b;
+		public static final int testBtn = 0x7f0b000e;
 	}
 	public static final class layout {
-		public static final int activity_main = 0x7f030000;
-		public static final int crop_image_view = 0x7f030009;
+		public static final int activity_main = 0x7f030001;
+		public static final int crop_image_view = 0x7f03000a;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0a0001;
