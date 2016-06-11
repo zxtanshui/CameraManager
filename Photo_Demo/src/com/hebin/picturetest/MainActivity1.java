@@ -197,6 +197,16 @@ public class MainActivity1 extends Activity implements OnClickListener
 
 
 	}
+    private void compressedNotSave()
+    {
+        Bitmap resizeBmp = operateUtils.compressionFiller(photoPath,
+                content_layout);
+        pictureShow.setImageBitmap(resizeBmp);
+        //camera_path = SaveBitmap(resizeBmp, "saveTemp");
+
+
+    }
+
 	final Handler myHandler = new Handler()
 	{
 		@Override
@@ -232,8 +242,10 @@ public class MainActivity1 extends Activity implements OnClickListener
 				Environment.MEDIA_MOUNTED))
 		{
 			File dir = new File(Constants.filePath);
-			if (!dir.exists())
-				dir.mkdir();
+			if (!dir.exists()){
+                dir.mkdir();
+            }
+
 			File file = new File(Constants.filePath + name +new Date().getTime()+ ".jpg");
             Log.e(TAG,"file--->"+file);
 			FileOutputStream out;
@@ -308,7 +320,7 @@ public class MainActivity1 extends Activity implements OnClickListener
 					timer.schedule(task, 10, 1000);
 				} else
 				{
-					compressed();
+                    compressedNotSave();
 				}
 
 				break;

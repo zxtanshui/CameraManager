@@ -9,10 +9,7 @@ import android.widget.TextView;
 
 
 import com.hebin.pagebrowse.PageBrowseActivity;
-import com.hebin.scale.GestureZoom;
 import com.hebin.scale.ScaleActivity;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by zhangxin on 16/5/31.
@@ -66,8 +63,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(intent2);
                 break;
             case R.id.tv_photo_gesture:
-                Intent intent3=new Intent(mContext, GestureZoom.class);
-                startActivity(intent3);
+//                Intent intent3=new Intent(mContext, GestureZoom.class);
+//                startActivity(intent3);
                 break;
 
         }

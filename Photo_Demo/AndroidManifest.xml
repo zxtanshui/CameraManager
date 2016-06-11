@@ -83,10 +83,6 @@
                   android:screenOrientation="portrait"
         >
         </activity>
-        <activity android:name="com.hebin.scale.GestureZoom"
-                  android:screenOrientation="portrait"
-        >
-        </activity>
 
         <activity android:name="com.hebin.selectpic.imageloader.SelectPicActivity"
                   android:screenOrientation="portrait"
