@@ -1,12 +1,15 @@
 package com.hebin.picturetest;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -29,7 +32,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.hebin.application.MyApplication;
 import com.hebin.temptest.FrameFilterActivity;
+import com.hebin.utils.CommonUtil;
 import com.hebin.utils.Constants;
 import com.js.photosdk.operate.OperateUtils;
 import com.js.photosdk.utils.FileUtils;
@@ -43,7 +48,8 @@ public class MainActivity1 extends Activity implements OnClickListener
 	private Button testBtn;
 	private Class<?> intentClass;
 	private int intentType = 0;
-
+    private String TAG="MainActivity1";
+    //private int gred;
 	/* 用来标识请求照相功能的activity */
 	private static final int CAMERA_WITH_DATA = 3023;
 
@@ -90,7 +96,7 @@ public class MainActivity1 extends Activity implements OnClickListener
 	int width = 0;
 
 	OperateUtils operateUtils;
-
+    private Context mContext;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -108,6 +114,7 @@ public class MainActivity1 extends Activity implements OnClickListener
 		addPictureFromCameraBtn = (Button) findViewById(R.id.addPictureFromCamera);
 		addPictureFromCameraBtn.setOnClickListener(this);
 		operateUtils = new OperateUtils(this);
+        mContext=MainActivity1.this;
 	}
 
 	@Override
@@ -187,6 +194,8 @@ public class MainActivity1 extends Activity implements OnClickListener
 				content_layout);
 		pictureShow.setImageBitmap(resizeBmp);
 		camera_path = SaveBitmap(resizeBmp, "saveTemp");
+
+
 	}
 	final Handler myHandler = new Handler()
 	{
@@ -225,16 +234,24 @@ public class MainActivity1 extends Activity implements OnClickListener
 			File dir = new File(Constants.filePath);
 			if (!dir.exists())
 				dir.mkdir();
-			File file = new File(Constants.filePath + name + ".jpg");
+			File file = new File(Constants.filePath + name +new Date().getTime()+ ".jpg");
+            Log.e(TAG,"file--->"+file);
 			FileOutputStream out;
 			try
 			{
 				out = new FileOutputStream(file);
+                Log.e(TAG,"out--->"+out);
 				if (bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out))
 				{
 					out.flush();
 					out.close();
+
+
 				}
+                Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                Uri uri = Uri.fromFile(file);
+                intent.setData(uri);
+                mContext.sendBroadcast(intent);//这个广播的目的就是更新图库，发了这个广播进入相册就可以找到你保存的图片了！，记得要传你更新的file哦
 				return file.getAbsolutePath();
 			} catch (IOException e)
 			{
@@ -255,7 +272,7 @@ public class MainActivity1 extends Activity implements OnClickListener
 
 		switch (requestCode)
 		{
-			case CAMERA_WITH_DATA :
+			case CAMERA_WITH_DATA ://拍照
 
 				photoPath = tempPhotoPath;
 				if (content_layout.getWidth() == 0)
@@ -265,6 +282,12 @@ public class MainActivity1 extends Activity implements OnClickListener
 				{
 					compressed();
 				}
+
+
+
+
+
+
 
 				break;
 
@@ -389,4 +412,40 @@ public class MainActivity1 extends Activity implements OnClickListener
 		return super.onOptionsItemSelected(item);
 	}
 
+
+    // 用来储存上传的图片到本地的文件夹
+//    public void SavePhotoSD(Bitmap bitmap) {
+//        FileOutputStream b = null;
+//        File file = new File(MyApplication.getImgDir()+ MyApplication.SENDMESSAGE_PHOTO);
+//        file.mkdirs();
+//        bitmap = CommonUtil.MatrixImage(bitmap, gred);//保存图片进行旋转  wzh 2015.03.04
+//        // String fileName = file + "/" + pohotcount + ".png";
+//        int start = pathImage.lastIndexOf("/");
+//        int end = pathImage.lastIndexOf(".");
+//        String str = pathImage.substring(start + 1, end);
+//        //String fileName = file + "/" + str + ".png";
+//        String fileName = file + "/" + str +new Date().getTime()+ ".png";
+//        pathSaveImage = fileName;
+//        if (editer == null) {
+//            imgfile.add(fileName);
+//            imgfile2.add(fileName);
+//        } else {
+//            imgfile1.add(fileName);
+//        }
+//        // PreferencesUtil.put(Popteacher.PHOTO_AND_CAMMER_FILE, imgfile);
+//        try {
+//            b = new FileOutputStream(fileName);
+//
+//            bitmap.compress(Bitmap.CompressFormat.PNG,50, b);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            b.flush();
+//            b.close();
+//        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
 }
