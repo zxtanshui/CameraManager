@@ -23,6 +23,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Include next permission if you want to allow UIL to cache images on SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.hebin.application.MyApplication"
@@ -99,10 +100,6 @@
         </activity>
         <activity
             android:name="com.hebin.selectpic.imageloader.SelectPicActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.hebin.attribute.AttributeActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

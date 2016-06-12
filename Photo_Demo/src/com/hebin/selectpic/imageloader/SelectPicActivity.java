@@ -306,13 +306,20 @@ public class SelectPicActivity extends Activity implements
         /**
          * 可以看到文件夹的路径和图片的路径分开保存，极大的减少了内存的消耗；
          */
-		/*
-		 * mAdapter = new MyAdapter(getApplicationContext(), mImgs,
-		 * R.layout.grid_item, mImgDir.getAbsolutePath());
-		 * mGirdView.setAdapter(mAdapter); // mAdapter.notifyDataSetChanged();
-		 * 
-		 * mImageCount.setText(count+"/"+floder.getCount() + "张");
-		 */
+
+		  mAdapter = new MyAdapter(getApplicationContext(), mImgs,
+		 R.layout.grid_item, mImgDir.getAbsolutePath());
+		 mGirdView.setAdapter(mAdapter);
+        mImageCount.setText(0 + "/" + totalCount + "张");
+
+        mAdapter.setOnGetCountPicListener(new MyAdapter.OnGetCountPicListener() {
+
+            @Override
+            public void onGetCountPic(int count) {
+                // TODO Auto-generated method stub
+                mImageCount.setText(count + "/" + totalCount + "张");
+            }
+        });
         mChooseDir.setText(floder.getName());
         mListImageDirPopupWindow.dismiss();
 

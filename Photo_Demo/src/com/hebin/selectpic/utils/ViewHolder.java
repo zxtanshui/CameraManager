@@ -1,4 +1,5 @@
 package com.hebin.selectpic.utils;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.SparseArray;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 public class ViewHolder
 {
@@ -105,6 +107,7 @@ public class ViewHolder
 	 * 为ImageView设置图片
 	 * 
 	 * @param viewId
+	 * @param
 	 * @return
 	 */
 	public ViewHolder setImageBitmap(int viewId, Bitmap bm)
@@ -118,6 +121,8 @@ public class ViewHolder
 	 * 为ImageView设置图片
 	 * 
 	 * @param viewId
+	 * @param
+     *
 	 * @return
 	 */
 	public ViewHolder setImageByUrl(int viewId, String url)

@@ -2,6 +2,7 @@ package com.hebin.selectpic.imageloader;
 
 import java.util.List;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -16,6 +17,8 @@ import com.hebin.selectpic.utils.ViewHolder;
 
 public class ListImageDirPopupWindow extends BasePopupWindowForListView<ImageFloder>
 {
+
+    private String TAG="ListImageDirPopupWindow";
 	private ListView mListDir;
 
 	public ListImageDirPopupWindow(int width, int height,
@@ -63,7 +66,8 @@ public class ListImageDirPopupWindow extends BasePopupWindowForListView<ImageFlo
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id)
 			{
-
+                //Log.e(TAG,"mImageDirSelected"+mImageDirSelected);
+                //Log.e(TAG,"mDatas"+mDatas.size());
 				if (mImageDirSelected != null)
 				{
 					mImageDirSelected.selected(mDatas.get(position));

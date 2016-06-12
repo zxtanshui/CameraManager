@@ -13,6 +13,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.v4.util.LruCache;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 
@@ -211,6 +212,7 @@ public class ImageLoader
 					holder.path = path;
 					Message message = Message.obtain();
 					message.obj = holder;
+					// Log.e("TAG", "mHandler.sendMessage(message);");
 					mHandler.sendMessage(message);
 					mPoolSemaphore.release();
 				}
@@ -423,6 +425,7 @@ public class ImageLoader
 			{
 				value = fieldValue;
 
+				Log.e("TAG", value + "");
 			}
 		} catch (Exception e)
 		{
