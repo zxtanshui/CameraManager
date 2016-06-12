@@ -4,12 +4,12 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/preview.xml"
     },
     {
-        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_pagebrowse.xml",
-        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_pagebrowse.xml"
-    },
-    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/crop_image.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/crop_image.xml"
+    },
+    {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/activity_pagebrowse.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_pagebrowse.xml"
     },
     {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/addtext.xml",

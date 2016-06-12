@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.hebin.picturetest.R;
 import com.hebin.selectpic.imageloader.SelectPicActivity;
+import com.hebin.utils.Constants;
 import com.hebin.view.CancelDialogBuilder;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -43,7 +44,8 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
     private TextView tv_photo_create_time;
     private TextView tv_photo_create_location;
     private TextView tv_photo_modify_location;
-    String imagePath="";
+    private String imagePath="";
+    private String imagelocation="";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +110,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                     FileInputStream fis =null;
                     try {
                         fis=new FileInputStream(file);
-
+                        imagelocation=file.getAbsolutePath();
                         Toast.makeText(mContext,file.getAbsolutePath()+"",Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -374,6 +376,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
         cancel_dialogBuilder.setTitleText("修改拍摄图片路径");
        // cancel_dialogBuilder.setDetermineText("确定");
 
+        cancel_dialogBuilder.setOriginlocation(Constants.filePath);
         cancel_dialogBuilder.isCancelableOnTouchOutside(true)
                 .setCancelClick(new View.OnClickListener() {
                     @Override
@@ -383,12 +386,15 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                 }).setOkClick(new View.OnClickListener() {
                      @Override
                     public void onClick(View v) {
-                        cancel_dialogBuilder.dismiss();
+
+                         Constants.filePath=Constants.filePath+cancel_dialogBuilder.getLocation()+"/";
+                         cancel_dialogBuilder.dismiss();
 
                     }
                  }).setResumeClick(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
+                        Constants.filePath=Constants.filePathOrigin;
                         cancel_dialogBuilder.dismiss();
 
                     }

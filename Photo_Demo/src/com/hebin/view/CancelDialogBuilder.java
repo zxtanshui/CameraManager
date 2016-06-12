@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import com.hebin.picturetest.R;
 
+import org.w3c.dom.Text;
+
 public class CancelDialogBuilder extends Dialog implements DialogInterface {
 	private LinearLayout mLinearLayoutView;
 	private RelativeLayout mRelativeLayoutView;
@@ -39,7 +41,7 @@ public class CancelDialogBuilder extends Dialog implements DialogInterface {
     private Button btn_resume;
     private EditText et_modify_location;
     private LinearLayout ll_linearLayout_all;
-
+    private TextView tv_origin_location;
 	public CancelDialogBuilder(Context context) {
 		super(context);
 		init(context);
@@ -94,7 +96,7 @@ public class CancelDialogBuilder extends Dialog implements DialogInterface {
         btn_resume=(Button)mDialogView.findViewById(R.id.btn_resume);
         et_modify_location=(EditText)mDialogView.findViewById(R.id.et_modify_location);
         ll_linearLayout_all=(LinearLayout)mDialogView.findViewById(R.id.ll_linearLayout_all);
-
+        tv_origin_location=(TextView)mDialogView.findViewById(R.id.tv_origin_location);
 		setContentView(mDialogView);
 
 		this.setOnShowListener(new OnShowListener() {
@@ -119,6 +121,14 @@ public class CancelDialogBuilder extends Dialog implements DialogInterface {
 //		dialog_title.setText(text);
         tv_dialog_title.setText(text);
 	}
+
+    public void setOriginlocation(String text){
+        tv_origin_location.setText(text);
+    }
+
+    public String getLocation(){
+        return et_modify_location.getText().toString().trim();
+    }
 //	public void setDetermineText(String text) {
 //		// TODO Auto-generated method stub
 //		 ((TextView) mDialogView.findViewById(R.id.cancle_determine)).setText(text);
