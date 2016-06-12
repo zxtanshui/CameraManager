@@ -9,6 +9,7 @@ import android.graphics.PointF;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.FloatMath;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -46,6 +47,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
     private TextView tv_photo_modify_location;
     private String imagePath="";
     private String imagelocation="";
+    private String TAG="ScaleActivity";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,8 +112,14 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                     FileInputStream fis =null;
                     try {
                         fis=new FileInputStream(file);
-                        imagelocation=file.getAbsolutePath();
-                        Toast.makeText(mContext,file.getAbsolutePath()+"",Toast.LENGTH_SHORT).show();
+                        imagelocation=file.getPath();
+//                        Log.e(TAG,"file.getPath()"+file.getPath());
+//                        Log.e(TAG,"file.getCanonicalPath()"+file.getCanonicalPath());
+//                        Log.e(TAG,"file.getAbsoluteFile()"+file.getAbsoluteFile());
+//                        Log.e(TAG,"file.getAbsolutePath()"+file.getAbsolutePath());
+//                        Log.e(TAG,"file.getParent()"+file.getParent());
+//                        Log.e(TAG,"imagePath--->"+imagePath);
+                        Toast.makeText(mContext,imagelocation+"",Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
