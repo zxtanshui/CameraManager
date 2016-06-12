@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_linearLayout_all"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="center"
+              android:background="#00000000"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              android:paddingTop="10dp"
+              android:paddingLeft="10dp"
+
+              android:gravity="center"
+
+>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                  android:background="#dddddd"
+    >
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_label_location"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="原始路径："
+                android:textSize="17sp"
+            />
+
+            <TextView
+                android:layout_toRightOf="@+id/tv_label_location"
+                android:id="@+id/tv_origin_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路径。。。。"
+                android:textSize="17sp"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_modify_location"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="修改路径："
+                android:textSize="17sp"
+            />
+
+            <EditText
+                android:id="@+id/et_modify_location"
+                android:layout_toRightOf="@+id/tv_modify_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="输入新的路径名字"
+                android:background="@null"
+                android:textSize="17sp"
+            />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+        >
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="取消"
+                android:gravity="center"
+                android:background="@drawable/bg_btn"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+            />
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="确定"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:background="@drawable/bg_btn"
+            />
+
+            <Button
+                android:id="@+id/btn_resume"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="恢复"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:background="@drawable/bg_btn"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -350,17 +350,17 @@ public class MainActivity1 extends Activity implements OnClickListener
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		menu.add(0, 1, 1, "滤镜");
-		menu.add(0, 2, 2, "人体变形");
+		//menu.add(0, 1, 1, "滤镜");
+		//menu.add(0, 2, 2, "人体变形");
 		menu.add(0, 3, 3, "边框");
 		menu.add(0, 4, 4, "涂鸦");
 		menu.add(0, 5, 5, "马赛克");
 		menu.add(0, 6, 6, "剪切");
 		menu.add(0, 7, 7, "添加水印");
-		menu.add(0, 8, 9, "图像增强");
+		//menu.add(0, 8, 9, "图像增强");
 		menu.add(0, 9, 10, "旋转");
 		menu.add(0, 10, 8, "添加文字");
-		menu.add(0, 11, 11, "测试");
+		//menu.add(0, 11, 11, "测试");
 		return super.onCreateOptionsMenu(menu);
 	}
 

@@ -20,6 +20,10 @@
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/activity_zoom.xml"
     },
     {
+        "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/dialog_modify_location.xml",
+        "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/dialog_modify_location.xml"
+    },
+    {
         "merged": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/build/intermediates/res/merged/debug/layout/layout_common_top_bar.xml",
         "source": "/Users/zhangxin/work/studioProgram/CameraManagerH/Photo_Demo/res/layout/layout_common_top_bar.xml"
     },

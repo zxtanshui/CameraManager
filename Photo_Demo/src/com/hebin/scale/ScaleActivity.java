@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.hebin.picturetest.R;
 import com.hebin.selectpic.imageloader.SelectPicActivity;
+import com.hebin.view.CancelDialogBuilder;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.download.ImageDownloader;
@@ -41,7 +42,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
     private TextView tv_photo_attribute;
     private TextView tv_photo_create_time;
     private TextView tv_photo_create_location;
-
+    private TextView tv_photo_modify_location;
     String imagePath="";
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
         tv_photo_attribute=(TextView)findViewById(R.id.tv_photo_attribute);
         tv_photo_create_time=(TextView)findViewById(R.id.tv_photo_create_time);
         tv_photo_create_location=(TextView)findViewById(R.id.tv_photo_create_location);
+        tv_photo_modify_location=(TextView)findViewById(R.id.tv_photo_modify_location);
 
         imageView = (ImageView) this.findViewById(R.id.imageView);
         imageView.setOnTouchListener(new TouchListener());
@@ -59,6 +61,7 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
         tv_photo_attribute.setOnClickListener(this);
         tv_photo_create_time.setOnClickListener(this);
         tv_photo_create_location.setOnClickListener(this);
+        tv_photo_modify_location.setOnClickListener(this);
     }
 
     @Override
@@ -113,6 +116,9 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                 }else{
                     Toast.makeText(mContext,"请选择照片",Toast.LENGTH_SHORT).show();
                 }
+                break;
+            case R.id.tv_photo_modify_location:
+                dialogShowFinish();
                 break;
         }
     }
@@ -357,5 +363,37 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
         }
 
         return rs;
+    }
+
+    /**
+     * 放弃编辑对话框
+     */
+    public void dialogShowFinish() {
+        final CancelDialogBuilder cancel_dialogBuilder = CancelDialogBuilder
+                .getInstance(ScaleActivity.this);
+        cancel_dialogBuilder.setTitleText("修改拍摄图片路径");
+       // cancel_dialogBuilder.setDetermineText("确定");
+
+        cancel_dialogBuilder.isCancelableOnTouchOutside(true)
+                .setCancelClick(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cancel_dialogBuilder.dismiss();
+                    }
+                }).setOkClick(new View.OnClickListener() {
+                     @Override
+                    public void onClick(View v) {
+                        cancel_dialogBuilder.dismiss();
+
+                    }
+                 }).setResumeClick(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        cancel_dialogBuilder.dismiss();
+
+                    }
+
+                 }).show();
+
     }
 }

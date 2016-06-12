@@ -21,14 +21,14 @@ public final class R {
 		public static final int warp_line = 0x7f06000d;
 	}
 	public static final class drawable {
-		public static final int delete = 0x7f02000a;
-		public static final int ic_launcher = 0x7f02002a;
-		public static final int rotate = 0x7f020047;
+		public static final int delete = 0x7f02000b;
+		public static final int ic_launcher = 0x7f02002b;
+		public static final int rotate = 0x7f020048;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0b0032;
-		public static final int ImageView_image = 0x7f0b0031;
-		public static final int action_settings = 0x7f0b0080;
+		public static final int CropOverlayView = 0x7f0b0033;
+		public static final int ImageView_image = 0x7f0b0032;
+		public static final int action_settings = 0x7f0b0088;
 		public static final int addPictureFromCamera = 0x7f0b000d;
 		public static final int addPictureFromPhoto = 0x7f0b000c;
 		public static final int off = 0x7f0b0000;
