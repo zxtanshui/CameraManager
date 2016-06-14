@@ -37,6 +37,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -152,11 +153,40 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                 deletePhotoFile();
                 break;
             case R.id.tv_photo_date:
+                String photoCreateTime=getFileDate();
+                if(!TextUtils.isEmpty(photoCreateTime)){
+                    Toast.makeText(mContext,"图片的拍摄时间为："+getFileDate(),Toast.LENGTH_SHORT).show();
+                }
 
                 break;
         }
     }
+    //获取文件的创建时间信息
+    public String getFileDate(){
+        File file=null;
+        if(!TextUtils.isEmpty(imagePath)){
+             file = new File(imagePath);
+//            FileInputStream fis =null;
+//            try {
+//                fis=new FileInputStream(file);
+//                imagelocation=file.getPath();
+//                //Toast.makeText(mContext,imagelocation+"",Toast.LENGTH_SHORT).show();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        }else{
+            Toast.makeText(mContext,"请选择照片",Toast.LENGTH_SHORT).show();
+            return "";
+        }
+        return formatTime(file.lastModified());
+    }
+    public String formatTime(long fileCreateTime){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = formatter.format(fileCreateTime);
 
+            return dateString;
+
+    }
     //删除照片
     public void deletePhotoFile(){
 
