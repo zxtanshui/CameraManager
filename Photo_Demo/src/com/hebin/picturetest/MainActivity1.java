@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.provider.MediaStore.MediaColumns;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
@@ -202,9 +203,9 @@ public class MainActivity1 extends Activity implements OnClickListener
         Bitmap resizeBmp = operateUtils.compressionFiller(photoPath,
                 content_layout);
         pictureShow.setImageBitmap(resizeBmp);
+        camera_path = SaveBitmapNotSave(resizeBmp, "saveTemp");
+
         //camera_path = SaveBitmap(resizeBmp, "saveTemp");
-
-
     }
 
 	final Handler myHandler = new Handler()
@@ -273,6 +274,45 @@ public class MainActivity1 extends Activity implements OnClickListener
 
 		return null;
 	}
+
+
+    public String SaveBitmapNotSave(Bitmap bitmap, String name)
+    {
+        if (Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED))
+        {
+            File dir = new File(Constants.filePath);
+            if (!dir.exists()){
+                dir.mkdir();
+            }
+
+            File file = new File(Constants.filePath + name +new Date().getTime()+ ".jpg");
+            Log.e(TAG,"file--->"+file);
+            FileOutputStream out;
+            try
+            {
+                out = new FileOutputStream(file);
+                Log.e(TAG,"out--->"+out);
+                if (bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out))
+                {
+                    out.flush();
+                    out.close();
+
+
+                }
+//                Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+//                Uri uri = Uri.fromFile(file);
+//                intent.setData(uri);
+//                mContext.sendBroadcast(intent);//这个广播的目的就是更新图库，发了这个广播进入相册就可以找到你保存的图片了！，记得要传你更新的file哦
+                return file.getAbsolutePath();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data)
 	{
@@ -373,6 +413,7 @@ public class MainActivity1 extends Activity implements OnClickListener
 					.show();
 			return true;
 		}
+
 		switch (item.getItemId())
 		{
 			case 1 :

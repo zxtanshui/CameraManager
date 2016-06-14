@@ -26,9 +26,9 @@ public final class R {
 		public static final int rotate = 0x7f020048;
 	}
 	public static final class id {
-		public static final int CropOverlayView = 0x7f0b0033;
-		public static final int ImageView_image = 0x7f0b0032;
-		public static final int action_settings = 0x7f0b0088;
+		public static final int CropOverlayView = 0x7f0b0035;
+		public static final int ImageView_image = 0x7f0b0034;
+		public static final int action_settings = 0x7f0b008a;
 		public static final int addPictureFromCamera = 0x7f0b000d;
 		public static final int addPictureFromPhoto = 0x7f0b000c;
 		public static final int off = 0x7f0b0000;

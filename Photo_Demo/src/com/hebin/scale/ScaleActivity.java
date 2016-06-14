@@ -1,12 +1,15 @@
 package com.hebin.scale;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.PointF;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.FloatMath;
 import android.util.Log;
@@ -18,11 +21,14 @@ import android.widget.Toast;
 
 import com.hebin.picturetest.R;
 import com.hebin.selectpic.imageloader.SelectPicActivity;
+import com.hebin.selectpic.utils.CommonAdapter;
 import com.hebin.utils.Constants;
 import com.hebin.view.CancelDialogBuilder;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.download.ImageDownloader;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -48,16 +54,24 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
     private String imagePath="";
     private String imagelocation="";
     private String TAG="ScaleActivity";
+
+    private TextView tv_photo_detele;
+    private TextView tv_photo_date;
+
+    private Activity act;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scale);
         mContext=ScaleActivity.this;
+        act=ScaleActivity.this;
         tv_photo_select=(TextView) findViewById(R.id.tv_photo_select);
         tv_photo_attribute=(TextView)findViewById(R.id.tv_photo_attribute);
         tv_photo_create_time=(TextView)findViewById(R.id.tv_photo_create_time);
         tv_photo_create_location=(TextView)findViewById(R.id.tv_photo_create_location);
         tv_photo_modify_location=(TextView)findViewById(R.id.tv_photo_modify_location);
+        tv_photo_detele=(TextView)findViewById(R.id.tv_photo_detele);
+        tv_photo_date=(TextView)findViewById(R.id.tv_photo_date);
 
         imageView = (ImageView) this.findViewById(R.id.imageView);
         imageView.setOnTouchListener(new TouchListener());
@@ -66,6 +80,9 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
         tv_photo_create_time.setOnClickListener(this);
         tv_photo_create_location.setOnClickListener(this);
         tv_photo_modify_location.setOnClickListener(this);
+        tv_photo_detele.setOnClickListener(this);
+        tv_photo_date.setOnClickListener(this);
+
     }
 
     @Override
@@ -130,7 +147,46 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
             case R.id.tv_photo_modify_location:
                 dialogShowFinish();
                 break;
+            case R.id.tv_photo_detele:
+                //Toast.makeText(mContext,"点击了------》",Toast.LENGTH_SHORT).show();
+                deletePhotoFile();
+                break;
+            case R.id.tv_photo_date:
+
+                break;
         }
+    }
+
+    //删除照片
+    public void deletePhotoFile(){
+
+        //Log.e(TAG,"imagePath---->"+imagePath);
+        if(!TextUtils.isEmpty(imagePath)){
+
+            //删除数据库信息
+            String where = MediaStore.Images.Media.DATA + "='" + imagePath + "'";
+            getContentResolver().delete(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, where, null);
+            //删除文件
+            File file = new File(imagePath);
+
+            file.delete();
+
+            Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            Uri uri = Uri.fromFile(file);
+            intent.setData(uri);
+            mContext.sendBroadcast(intent);
+
+
+           // Log.e(TAG,"where-->"+where);
+            //Log.e(TAG,"imagePath--->"+imagePath);
+            imagePath="";
+            imageView.setImageBitmap(null);
+            Toast.makeText(mContext,"删除成功",Toast.LENGTH_SHORT).show();
+            //setImageView();
+        }else{
+            Toast.makeText(mContext,"照片已经删除",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     public String FormetFileSize(long fileS) {//转换文件大小
@@ -257,23 +313,27 @@ public class ScaleActivity extends Activity implements View.OnClickListener {
                     imagePath=result.get(0);
                 }
 
-                //显示图片的配置
-                DisplayImageOptions options = new DisplayImageOptions.Builder()
-                        // .showImageOnLoading(R.drawable.ic_stub)
-                        // .showImageOnFail(R.drawable.ic_error)
-                        .cacheInMemory(true)
-                        .cacheOnDisk(true)
-                        .bitmapConfig(Bitmap.Config.RGB_565)
-                        .build();
+                setImageView();
 
-                String imageUrl1 = ImageDownloader.Scheme.FILE.wrap(imagePath);
-                ImageLoader.getInstance().displayImage(imageUrl1, imageView, options);
             }
         }
-
     }
 
+    //设置图片
+    public void setImageView(){
 
+        //显示图片的配置
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                // .showImageOnLoading(R.drawable.ic_stub)
+               // .showImageOnFail(null)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .bitmapConfig(Bitmap.Config.RGB_565)
+                .build();
+
+        String imageUrl1 = ImageDownloader.Scheme.FILE.wrap(imagePath);
+        ImageLoader.getInstance().displayImage(imageUrl1, imageView, options);
+    }
 
 
     public  String getFileCreated(final File file) {
